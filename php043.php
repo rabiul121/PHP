@@ -1,4 +1,5 @@
 <?php
+
 $fruits = array('apple', 'banana', 'orange', 'plum', 'dates', 'mango');
 $newFruits = array('jackfruits', 'tamarind');
 
