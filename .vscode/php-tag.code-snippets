@@ -3,6 +3,7 @@
         "prefix": "php",
         "body": [
           "<?php",
+          "",
           ""
         ],
         "description": "php-tag"
