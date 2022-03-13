@@ -24,10 +24,10 @@
                 ?>
 
                 <?php if (isset($_GET['fname']) && !empty($_GET['fname'])) {
-                    $fname = $_REQUEST['fname'];
+                    $fname = htmlspecialchars($_REQUEST['fname']);
                 } ?>
                 <?php if (isset($_GET['lname']) && !empty($_GET['lname'])) {
-                    $lname = $_REQUEST['lname'];
+                    $lname = htmlspecialchars($_REQUEST['lname']);
                 } ?>
             </p>
             <p>
