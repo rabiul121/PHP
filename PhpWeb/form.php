@@ -21,13 +21,19 @@
                 <?php
                 $fname = '';
                 $lname = '';
+                $checked = '';
+                if (isset($_REQUEST['cb1']) && $_REQUEST['cb1'] == 1){
+                    $checked = 'checked';
+                }
                 ?>
 
                 <?php if (isset($_GET['fname']) && !empty($_GET['fname'])) {
-                    $fname = htmlspecialchars($_REQUEST['fname']);
+                    // $fname = htmlspecialchars($_REQUEST['fname']);
+                     $fname = htmlspecialchars($_REQUEST['fname']);
                 } ?>
                 <?php if (isset($_GET['lname']) && !empty($_GET['lname'])) {
-                    $lname = htmlspecialchars($_REQUEST['lname']);
+                    // $lname = htmlspecialchars($_REQUEST['lname']);
+                     $lname = htmlspecialchars($_REQUEST['lname']);
                 } ?>
             </p>
             <p>
@@ -44,6 +50,11 @@
 
                 <label for="lname">Last Name</label>
                 <input type="text" name="lname" id="lname" value="<?php echo $lname; ?>">
+
+                <div>
+                    <input type="checkbox" name="cb1" id="cb1" value="1" <?php echo $checked ?>>
+                    <label for="cb1" class="label-inline">Some Checkbox</label>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
